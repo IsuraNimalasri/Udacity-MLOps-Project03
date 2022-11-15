@@ -1,9 +1,9 @@
 name: Dev ML Pipeline
 on:
-  pull_request:
+  pull:
     branches:
       - development
-    types: [opened]
+        main
 jobs:
   test:
     runs-on: ubuntu-latest
