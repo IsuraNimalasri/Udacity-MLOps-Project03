@@ -1,10 +1,8 @@
 name: Dev ML Pipeline
 
 on:
-  push:
-    branches:
-      - development
-        main
+  push
+  
 jobs:
   test:
     runs-on: ubuntu-latest
