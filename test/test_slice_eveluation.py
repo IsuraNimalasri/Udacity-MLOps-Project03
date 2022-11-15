@@ -26,7 +26,7 @@ def test_slice_evaluation():
         "race",
         "sex",
         "native-country"]
-    X_train, y_train, encoder, lb, df_test = preprocessing("data/census_clean.csv", cat_features)
+    X_train, y_train, encoder, lb, df_test = preprocessing("data/census_clean_copy.csv", cat_features)
     model = train(X_train, y_train)
     slice_evaluation(df_test, model, cat_features, encoder, lb)
     assert os.path.isfile("model/slice_output.txt")

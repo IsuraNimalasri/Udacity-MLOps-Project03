@@ -25,13 +25,9 @@ jobs:
       - name: setup DVC to pull data
         uses: iterative/setup-dvc@v1
       
-#      - name: DVC Init Command
-#        run : |
-#          dvc init -f
-#
-#      - name: DVC Pull Command
-#        run : |
-#          dvc pull
+      - name: Run Train
+        run: |
+          python train_model.py
 
       - name: Install flake and pytest dependencies
         run: |
