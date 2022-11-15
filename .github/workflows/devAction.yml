@@ -21,16 +21,17 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
       - name: setup DVC to pull data
         uses: iterative/setup-dvc@v1
       
       - name: DVC Init Command
         run : |
-          dvc init
+          dvc init -f
       
       - name: DVC Pull Command
         run : |
-          dvc pull
+          dvc pull -f
       - name: Install flake and pytest dependencies
         run: |
           python -m pip install --upgrade pip
