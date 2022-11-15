@@ -4,7 +4,7 @@ on:
   push
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -31,7 +31,8 @@ jobs:
       
       - name: DVC Pull Command
         run : |
-          dvc pull -f
+          dvc pull
+
       - name: Install flake and pytest dependencies
         run: |
           python -m pip install --upgrade pip
