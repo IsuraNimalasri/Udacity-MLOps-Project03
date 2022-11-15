@@ -1,7 +1,7 @@
 name: Dev ML Pipeline
 
 on:
-  pull:
+  push:
     branches:
       - development
         main
